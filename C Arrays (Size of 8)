@@ -1,0 +1,42 @@
+#include<stdio.h>
+
+int findSum(int A[], int N)
+{
+    if (N<=0)
+    return 0;
+    return (findSum(A, N-1) + A[N-1]);
+}
+
+int main()
+{
+    //declaration of arrays
+    int A[] = {5, 33, 222, 3, 4, 56, 77, 4};
+    int N = sizeof(A)/sizeof(A[0]);
+    printf("Sum of all array Element: %d", findSum(A, N));
+    return 0;
+}
+
+// or 
+
+#include <stdio.h>
+int main()
+{
+     int sum_arr[8], i, n=8, sum = 0, sumofArray;
+     printf("size of Arrays %d\n", n);
+
+     for(i=0; i<n; i++)
+     
+     {
+         
+          printf("Element %d: ",i+1);
+          scanf("%d", &sum_arr[i]);
+          
+          // adding array elements entered by the user to the sum variable
+          sum += sum_arr[i];
+     }
+     
+     sumofArray = sum;
+     printf("Sum of all Array element = %d", sumofArray);
+
+     return 0;
+}
