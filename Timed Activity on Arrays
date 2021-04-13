@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+int main() {
+    int A[3][2] = {
+        {1110, 1110},
+        {1100, 1100},
+        {1001, 1001}
+    };
+    
+    int Id_Num1 = A[0][0];
+    int Pin1 = A[0][1];
+    
+    int Id_Num2 = A[1][0];
+    int Pin2 = A[1][1];
+    
+    int Id_Num3 = A[2][0];
+    int Pin3 = A[2][1];
+    
+    printf("Enter Id Number: ");
+    scanf("%d", &Id_Num1);
+    
+    printf("Enter Pin: ");
+    scanf("%d", &Pin1);
+    
+    if (Id_Num1 == Pin1)
+    {
+        printf("\n\n You have Successfully Logged in!");
+        printf("\nID#: %d", Id_Num1);
+    }
+    else
+    {
+        printf("\n\nInvalid Pin/Id");
+    }
+    
+    return 0;
+}
