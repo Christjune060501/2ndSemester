@@ -1,0 +1,47 @@
+#include <stdio.h>
+#include <string.h>
+
+void stringCount(char *str)
+{
+    int a, vowel = 0, consonant = 0;
+
+    printf("\nString Length: %d", strlen(str));
+
+    for(a=0;str[a];a++)
+    {
+        if((str[a] >= 65 && str[a] <= 90) || (str[a] >= 97 && str[a] <= 122))
+        {
+            if(str[a] == 'a' || str[a] == 'e' || str[a] == 'i' || str[a] =='o' || str[a] == 'u' || str[a] == 'A' || str[a] == 'E' || str[a] == 'I' || str[a] =='O' || str[a] == 'U')
+                vowel++;
+            else
+                consonant++;
+        }
+    }
+
+    printf("\nVowels: %d", vowel);
+    printf("\nConsonants: %d", consonant);
+}
+
+int main()
+{
+    char str[100];
+    int a = 0;
+
+    printf("Input a sentence: ");
+    fgets(str, sizeof(str), stdin);
+
+    while(str[a] != '\0')
+    {
+        if(str[a] == 'a' || str[a] == 'e' || str[a] == 'i' || str[a] == 'o' || str[a] == 'u')
+        {
+            str[a] = str[a] - 32;
+        }
+        a++;
+    }
+    printf("String Converted: ");
+    puts(str);
+
+    stringCount(str);
+
+    return 0;
+}
