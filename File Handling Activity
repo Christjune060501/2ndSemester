@@ -24,7 +24,7 @@ int main ()
   fclose (fptr);
 //----- Read the file after appended ------- 
 	fptr = fopen (fname, "r");  
-	printf("\n Inside of the text.txt %s is  :\n",fname);
+	printf("\n Inside of the %s is: ",fname);
 	str1 = fgetc(fptr);
 	while (str1 != EOF)
 		{
