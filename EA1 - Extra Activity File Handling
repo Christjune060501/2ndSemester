@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+//https://github.com/Christjune060501/2ndSemester/blob/main/EA1%20-%20Extra%20Activity%20File%20Handling//
+
 int main(void)
 {
     FILE *file1, *file2;
@@ -87,5 +89,3 @@ int main(void)
 
     return 0;
 }
-
-https://github.com/Christjune060501/2ndSemester/blob/main/EA1%20-%20Extra%20Activity%20File%20Handling
